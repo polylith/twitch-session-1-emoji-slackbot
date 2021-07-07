@@ -2,12 +2,12 @@ import os
 import requests
 import json
 
-client_id = "<INSERT_YOUR_TWITCH_CLIENT_ID>"
-client_secret = "INSERT_YOUR_TWITCH_CLIENT_SECRET>"
+client_id = os.getenv("TWITCH_CLIENT_ID")
+client_secret = os.getenv("TWITCH_CLIENT_SECRET")
 broadcaster_user_id = "522799961"
 scopes = "user:read:follows"
 # for local development you can expose your server with ngrok
-callback_url = "<INSERT_YOUR_CALLBACK_URL>"
+callback_url = os.getenv("CALLBACK_URL")
 
 # GET YOUR ACCESS SERVER
 
